@@ -24,10 +24,11 @@ type MyClient struct {
 
 var client *whatsmeow.Client
 
+// Add event handler
 func eventHandler(evt interface{}) {
-	jid := types.NewJID("number", "s.whatsapp.net")
 	switch v := evt.(type) {
 	case *events.Message:
+		jid := types.NewJID(v.Info.Sender.User, "s.whatsapp.net") // Use "s.whatsapp.net" for senders from other servers
 		fmt.Println("Received a message!", v.Message.GetConversation())
 		_, err := client.SendMessage(context.Background(), jid, &waProto.Message{
 			Conversation: proto.String("Iya sayang kenapa? 🥰"),
@@ -44,7 +45,7 @@ func eventHandler(evt interface{}) {
 func main() {
 	dbLog := waLog.Stdout("Database", "DEBUG", true)
 	// Make sure you add appropriate DB connector imports, e.g. github.com/mattn/go-sqlite3 for SQLite
-	container, err := sqlstore.New("sqlite3", "file:examplestore.db?_foreign_keys=on", dbLog)
+	container, err := sqlstore.New("sqlite3", "file:sqlite3.db?_foreign_keys=on", dbLog)
 	if err != nil {
 		panic(err)
 	}
