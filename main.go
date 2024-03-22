@@ -29,7 +29,6 @@ func eventHandler(evt interface{}) {
 	switch v := evt.(type) {
 	case *events.Message:
 		fmt.Println("Received a message!", v.Message.GetConversation())
-		fmt.Println("==============================Context: ", context.Background(), "==============================")
 		_, err := client.SendMessage(context.Background(), jid, &waProto.Message{
 			Conversation: proto.String("Iya sayang kenapa? 🥰"),
 		})
