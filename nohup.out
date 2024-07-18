@@ -1,0 +1,679 @@
+02:10:16.415 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:10:16.745 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00025e500[0m
+02:10:17.043 [Client DEBUG] Starting handler queue loop[0m
+02:10:17.512 [Client/Recv DEBUG] <success abprops="10" companion_enc_static="6f0a4B+O35VZiapTd+8LJyFRNYTRzxW0K2gcYBHLu4k=" creation="1721267900" display_name="+62∙∙∙∙∙∙∙∙∙32" lid="252922470338713:7@lid" location="cln" props="27" t="1721268617"/>[0m
+02:10:17.512[36m [Client INFO] Successfully authenticated[0m
+02:10:17.512 [Client/Send DEBUG] <iq id="159.8-1" to="s.whatsapp.net" type="get" xmlns="encrypt"><count/></iq>[0m
+02:10:17.740 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><edge_routing><routing_info>08050808</routing_info></edge_routing></ib>[0m
+02:10:17.740 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><dirty timestamp="1721268617" type="account_sync"/></ib>[0m
+02:10:17.913 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-1" type="result"><count value="48"/></iq>[0m
+02:10:17.913 [Client DEBUG] Database has 48 prekeys, server says we have 48[0m
+02:10:17.913 [Client/Send DEBUG] <iq id="159.8-2" to="s.whatsapp.net" type="set" xmlns="passive"><active/></iq>[0m
+02:10:18.209 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-2" type="result"><active/></iq>[0m
+02:10:18.347 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><offline count="0"/></ib>[0m
+02:10:38.602 [Client/Send DEBUG] <iq id="159.8-3" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:10:38.898 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-3" t="1721268638" type="result"/>[0m
+02:10:57.394 [Client/Recv DEBUG] <message from="6282119292227:17@s.whatsapp.net" id="63F4AB640C48C97C6F" notify="6282119292227" sender_lid="251453205643418@lid" t="1721268657" type="text"><enc type="msg" v="2"><!-- 195 bytes --></enc><reporting><reporting_tag>01a1a559cf58eb0ecc0e8c1440032e7b</reporting_tag></reporting></message>[0m
+02:10:57.394 [Client DEBUG] Decrypting message from 6282119292227:17@s.whatsapp.net in 6282119292227@s.whatsapp.net[0m
+02:10:57.394 [Client/Send DEBUG] <ack class="message" id="63F4AB640C48C97C6F" to="6282119292227:17@s.whatsapp.net"/>[0m
+2024/07/18 02:10:57 main.go:214: Table created successfully
+2024/07/18 02:10:57 main.go:223: Event saved: {Tanggal:18-07-2024 Notifikasi:09:12 Keterangan:Perbaiki django}
+02:10:57.403 [Client/Send DEBUG] <iq id="159.8-5" to="s.whatsapp.net" type="get" xmlns="usync"><usync context="message" index="0" last="true" mode="query" sid="159.8-4"><query><devices version="2"/></query><list><user jid="6282119292227@s.whatsapp.net"/><user jid="6285173490332@s.whatsapp.net"/></list></usync></iq>[0m
+02:10:57.900 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-5" type="result"><usync context="message" index="0" last="true" mode="query" sid="159.8-4"><result><devices/></result><list><user jid="6285173490332@s.whatsapp.net"><devices><device-list><device id="0"/><device id="7" key-index="1"/></device-list><key-index-list ts="1721267899">0a1408ff8bdd8f0110bbede1b40618012202000128001240fed7c0c09d16e0ecdf6d31c2106cbe1f95ca40ebfebef2848e7b7ffec3b491cacb899bbd592a3a0c8a058d4bf33366caee0f68e58830c13a2016ac96900b3602</key-index-list></devices></user><user jid="6282119292227@s.whatsapp.net"><devices><device-list><device id="0"/><device id="17" key-index="1"/></device-list><key-index-list ts="1719996496">0a1508f889d7a20510d0a094b406180222030001022800124091304b79f628f3bf21bebc024c5b2ff89796b9f2b87c354202d0fecab660645a64784287a9ec0b7954c090e4e732cf2410289b8ca1b085fb18be02dd31a37900</key-index-list></devices></user></list></usync></iq>[0m
+02:10:57.905 [Client/Send DEBUG] <message id="3EB09121C55F58F57F71F1" to="6282119292227@s.whatsapp.net" type="text"><participants><to jid="6285173490332@s.whatsapp.net"><enc type="msg" v="2"><!-- 134 bytes --></enc></to><to jid="6282119292227@s.whatsapp.net"><enc type="pkmsg" v="2"><!-- 168 bytes --></enc></to><to jid="6282119292227:17@s.whatsapp.net"><enc type="msg" v="2">330a2105a3b45d4111a61a46cc6a33c7d85e9fa178e1c82c926f25e8ef77c9f2572cdd4c100018002220684e02926ebfe84bec0ff43608a0da20379a3e16a8bcfad3e2c42b9be761d3b333ad9b5530253fd2</enc></to></participants><device-identity><!-- 186 bytes --></device-identity></message>[0m
+02:10:58.221 [Client/Recv DEBUG] <ack class="message" from="6282119292227@s.whatsapp.net" id="3EB09121C55F58F57F71F1" t="1721268658"/>[0m
+02:10:58.221 [Client/Send DEBUG] <receipt id="63F4AB640C48C97C6F" to="6282119292227:17@s.whatsapp.net" type="inactive"/>[0m
+02:10:58.567 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB09121C55F58F57F71F1" t="1721268658"/>[0m
+02:10:58.567 [Client/Send DEBUG] <ack class="receipt" id="3EB09121C55F58F57F71F1" to="6282119292227:17@s.whatsapp.net"/>[0m
+02:10:58.568 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB09121C55F58F57F71F1" t="1721268658" type="read"/>[0m
+02:10:58.568 [Client/Send DEBUG] <ack class="receipt" id="3EB09121C55F58F57F71F1" to="6282119292227:17@s.whatsapp.net" type="read"/>[0m
+02:11:01.868 [Client/Send DEBUG] <iq id="159.8-6" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:11:02.164 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-6" t="1721268662" type="result"/>[0m
+2024/07/18 02:11:17 main.go:234: Running scheduled check
+2024/07/18 02:11:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:11
+02:11:24.709 [Client/Send DEBUG] <iq id="159.8-7" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:11:25.005 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-7" t="1721268684" type="result"/>[0m
+02:11:49.726 [Client/Send DEBUG] <iq id="159.8-8" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:11:50.024 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-8" t="1721268709" type="result"/>[0m
+02:12:15.047 [Client/Send DEBUG] <iq id="159.8-9" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:12:15.343 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-9" t="1721268735" type="result"/>[0m
+2024/07/18 02:12:17 main.go:234: Running scheduled check
+2024/07/18 02:12:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:12
+6282119292227@s.whatsapp.net
+02:12:18.098 [Client/Recv DEBUG] <message from="6282119292227:17@s.whatsapp.net" id="8B7F285C2F7D017466" notify="6282119292227" sender_lid="251453205643418@lid" t="1721268737" type="text"><enc type="msg" v="2"><!-- 259 bytes --></enc><reporting><reporting_tag>01a103e4a54e1157f3233cab66d14bb8</reporting_tag></reporting></message>[0m
+02:12:18.098 [Client DEBUG] Decrypting message from 6282119292227:17@s.whatsapp.net in 6282119292227@s.whatsapp.net[0m
+02:12:18.099 [Client/Send DEBUG] <ack class="message" id="8B7F285C2F7D017466" to="6282119292227:17@s.whatsapp.net"/>[0m
+02:12:22.052[31m [Database ERROR] Failed to save identity of 6282119292227:0: database is locked[0m
+02:12:23.106[31m [Database ERROR] Failed to store has session for 6282119292227:17: database is locked[0m
+02:12:23.106[33m [Client WARN] Error decrypting message from 6282119292227:17@s.whatsapp.net in 6282119292227@s.whatsapp.net: failed to decrypt normal message: no session found for user 6282119292227:17[0m
+02:12:23.106[33m [Client WARN] Node handling took 5.007569529s for <message from="6282119292227:17@s.whatsapp.net" id="8B7F285C2F7D017466" notify="6282119292227" sender_lid="251453205643418@lid" t="1721268737" type="text"><enc type="msg" v="2"><!-- 259 bytes --></enc><reporting><reporting_tag>01a103e4a54e1157f3233cab66d14bb8</reporting_tag></reporting></message>[0m
+02:12:23.106 [Client/Send DEBUG] <receipt id="8B7F285C2F7D017466" to="6282119292227:17@s.whatsapp.net" type="retry"><retry count="1" id="8B7F285C2F7D017466" t="1721268737" v="1"/><registration>eb8c4935</registration></receipt>[0m
+02:12:23.403 [Client/Recv DEBUG] <ack class="receipt" from="6282119292227:17@s.whatsapp.net" id="8B7F285C2F7D017466" type="retry"/>[0m
+02:12:23.751 [Client/Recv DEBUG] <message from="6282119292227:17@s.whatsapp.net" id="8B7F285C2F7D017466" notify="6282119292227" sender_lid="251453205643418@lid" t="1721268743" type="text"><reporting><reporting_tag>01a14ee60d0531a99f8403c708102a5c</reporting_tag></reporting><enc count="1" type="msg" v="2"><!-- 259 bytes --></enc></message>[0m
+02:12:23.751 [Client DEBUG] Decrypting message from 6282119292227:17@s.whatsapp.net in 6282119292227@s.whatsapp.net[0m
+02:12:23.752 [Client/Send DEBUG] <ack class="message" id="8B7F285C2F7D017466" to="6282119292227:17@s.whatsapp.net"/>[0m
+02:12:27.059[31m [Database ERROR] Failed to store session with 6282119292227:0: database is locked[0m
+02:12:28.759[31m [Database ERROR] Failed to store has session for 6282119292227:17: database is locked[0m
+02:12:28.759[33m [Client WARN] Error decrypting message from 6282119292227:17@s.whatsapp.net in 6282119292227@s.whatsapp.net: failed to decrypt normal message: no session found for user 6282119292227:17[0m
+02:12:28.759[33m [Client WARN] Node handling took 5.007910049s for <message from="6282119292227:17@s.whatsapp.net" id="8B7F285C2F7D017466" notify="6282119292227" sender_lid="251453205643418@lid" t="1721268743" type="text"><reporting><reporting_tag>01a14ee60d0531a99f8403c708102a5c</reporting_tag></reporting><enc count="1" type="msg" v="2"><!-- 259 bytes --></enc></message>[0m
+02:12:32.066[31m [Database ERROR] Failed to save identity of 6282119292227:17: database is locked[0m
+02:12:33.765[31m [Client ERROR] Failed to get prekey for retry receipt: failed to query next prekey ID: database is locked[0m
+02:12:33.766 [Client/Send DEBUG] <receipt id="8B7F285C2F7D017466" to="6282119292227:17@s.whatsapp.net" type="retry"><retry count="2" id="8B7F285C2F7D017466" t="1721268743" v="1"/><registration>eb8c4935</registration></receipt>[0m
+02:12:34.064 [Client/Recv DEBUG] <ack class="receipt" from="6282119292227:17@s.whatsapp.net" id="8B7F285C2F7D017466" type="retry"/>[0m
+02:12:34.505 [Client/Recv DEBUG] <message from="6282119292227:17@s.whatsapp.net" id="8B7F285C2F7D017466" notify="6282119292227" sender_lid="251453205643418@lid" t="1721268754" type="text"><reporting><reporting_tag>01a18300d88b5ce9409223662f3ba4b1</reporting_tag></reporting><registration>eb8c4935</registration><enc count="2" type="msg" v="2"><!-- 275 bytes --></enc></message>[0m
+02:12:34.505 [Client DEBUG] Decrypting message from 6282119292227:17@s.whatsapp.net in 6282119292227@s.whatsapp.net[0m
+02:12:34.505 [Client/Send DEBUG] <ack class="message" id="8B7F285C2F7D017466" to="6282119292227:17@s.whatsapp.net"/>[0m
+02:12:37.073[31m [Database ERROR] Failed to store session with 6282119292227:17: database is locked[0m
+02:12:39.513[31m [Database ERROR] Failed to store has session for 6282119292227:17: database is locked[0m
+02:12:39.513[33m [Client WARN] Error decrypting message from 6282119292227:17@s.whatsapp.net in 6282119292227@s.whatsapp.net: failed to decrypt normal message: no session found for user 6282119292227:17[0m
+02:12:39.513[33m [Client WARN] Node handling took 5.007801137s for <message from="6282119292227:17@s.whatsapp.net" id="8B7F285C2F7D017466" notify="6282119292227" sender_lid="251453205643418@lid" t="1721268754" type="text"><reporting><reporting_tag>01a18300d88b5ce9409223662f3ba4b1</reporting_tag></reporting><registration>eb8c4935</registration><enc count="2" type="msg" v="2"><!-- 275 bytes --></enc></message>[0m
+02:12:41.471 [Client/Recv DEBUG] <message from="6282119292227@s.whatsapp.net" id="C54C397DF8F2FA2AE53BF14C1232666E" notify="6282119292227" sender_lid="251453205643418@lid" t="1721268761" type="text"><enc type="msg" v="2"><!-- 259 bytes --></enc><reporting><reporting_tag>01a13efe54a38328bab6aae424a1ac7d</reporting_tag></reporting></message>[0m
+02:12:41.471 [Client DEBUG] Decrypting message from 6282119292227@s.whatsapp.net[0m
+02:12:41.471 [Client/Send DEBUG] <ack class="message" id="C54C397DF8F2FA2AE53BF14C1232666E" to="6282119292227@s.whatsapp.net"/>[0m
+02:12:42.080[31m [Database ERROR] Failed to save identity of 6285173490332:0: database is locked[0m
+02:12:43.639 [Client/Send DEBUG] <iq id="159.8-10" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:12:43.935 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-10" t="1721268763" type="result"/>[0m
+02:12:44.520[31m [Client ERROR] Failed to get prekey for retry receipt: failed to query next prekey ID: database is locked[0m
+02:12:44.520 [Client/Send DEBUG] <receipt id="8B7F285C2F7D017466" to="6282119292227:17@s.whatsapp.net" type="retry"><retry count="3" id="8B7F285C2F7D017466" t="1721268754" v="1"/><registration>eb8c4935</registration></receipt>[0m
+02:12:44.817 [Client/Recv DEBUG] <ack class="receipt" from="6282119292227:17@s.whatsapp.net" id="8B7F285C2F7D017466" type="retry"/>[0m
+02:12:45.587 [Client/Recv DEBUG] <message from="6282119292227:17@s.whatsapp.net" id="8B7F285C2F7D017466" notify="6282119292227" sender_lid="251453205643418@lid" t="1721268765" type="text"><reporting><reporting_tag>01a1c3853d7a81da4e4c4fb0739abb0f</reporting_tag></reporting><device-identity><!-- 186 bytes --></device-identity><registration>eb8c4935</registration><enc count="3" type="pkmsg" v="2"><!-- 358 bytes --></enc></message>[0m
+02:12:46.478[31m [Database ERROR] Failed to store has session for 6282119292227:0: database is locked[0m
+02:12:46.478[33m [Client WARN] Error decrypting message from 6282119292227@s.whatsapp.net: failed to decrypt normal message: no session found for user 6282119292227:0[0m
+02:12:46.478[33m [Client WARN] Node handling took 5.007263182s for <message from="6282119292227@s.whatsapp.net" id="C54C397DF8F2FA2AE53BF14C1232666E" notify="6282119292227" sender_lid="251453205643418@lid" t="1721268761" type="text"><enc type="msg" v="2"><!-- 259 bytes --></enc><reporting><reporting_tag>01a13efe54a38328bab6aae424a1ac7d</reporting_tag></reporting></message>[0m
+02:12:46.478 [Client/Send DEBUG] <receipt id="C54C397DF8F2FA2AE53BF14C1232666E" to="6282119292227@s.whatsapp.net" type="retry"><retry count="1" id="C54C397DF8F2FA2AE53BF14C1232666E" t="1721268761" v="1"/><registration>eb8c4935</registration></receipt>[0m
+02:12:46.478 [Client DEBUG] Decrypting message from 6282119292227:17@s.whatsapp.net in 6282119292227@s.whatsapp.net[0m
+02:12:46.478 [Client/Send DEBUG] <ack class="message" id="8B7F285C2F7D017466" to="6282119292227:17@s.whatsapp.net"/>[0m
+02:12:46.775 [Client/Recv DEBUG] <ack class="receipt" from="6282119292227@s.whatsapp.net" id="C54C397DF8F2FA2AE53BF14C1232666E" type="retry"/>[0m
+02:12:47.087[31m [Database ERROR] Failed to store session with 6285173490332:0: database is locked[0m
+02:12:47.087 [Client/Send DEBUG] <message id="3EB05BCDD5F037D8906409" to="6282119292227@s.whatsapp.net" type="text"><participants><to jid="6282119292227@s.whatsapp.net"><enc type="pkmsg" v="2"><!-- 184 bytes --></enc></to><to jid="6282119292227:17@s.whatsapp.net"><enc type="msg" v="2">330a2105a3b45d4111a61a46cc6a33c7d85e9fa178e1c82c926f25e8ef77c9f2572cdd4c100118002240a4610c6582b46e210bbe67164b7e07a74ea13d73253207503ae9df794a6233bf668027bfafd7563957003afa69b31648a9cb6eb16163732639194aede28466a9ba474c9a9576e461</enc></to><to jid="6285173490332@s.whatsapp.net"><enc type="msg" v="2"><!-- 150 bytes --></enc></to></participants><device-identity><!-- 186 bytes --></device-identity></message>[0m
+02:12:47.237 [Client/Recv DEBUG] <message from="6282119292227@s.whatsapp.net" id="C54C397DF8F2FA2AE53BF14C1232666E" notify="6282119292227" sender_lid="251453205643418@lid" t="1721268767" type="text"><reporting><reporting_tag>01a1954386636a619d601659850b067c</reporting_tag></reporting><enc count="1" type="msg" v="2"><!-- 259 bytes --></enc></message>[0m
+02:12:47.386 [Client/Recv DEBUG] <ack class="message" from="6282119292227@s.whatsapp.net" id="3EB05BCDD5F037D8906409" t="1721268767"/>[0m
+2024/07/18 02:12:47 main.go:279: Reminder sent successfully to 6282119292227
+2024/07/18 02:12:47 main.go:214: Table created successfully
+2024/07/18 02:12:47 main.go:223: Event saved: {Tanggal:19-07-2024 Notifikasi:07:00 Keterangan:Ke Gereja GKim, besok, melakukan acara demo applikasi yang di lakukan oleh sodara martin.}
+02:12:47.451 [Client/Send DEBUG] <message id="3EB0064B0B99FCA585F263" to="6282119292227@s.whatsapp.net" type="text"><participants><to jid="6282119292227@s.whatsapp.net"><enc type="pkmsg" v="2"><!-- 168 bytes --></enc></to><to jid="6282119292227:17@s.whatsapp.net"><enc type="msg" v="2">330a2105dff9f01f1263072ac108c8b554256b37f1fa9d379d0c4b2e84084bc3d69a7e1b100018ffffffff0f2220354bef3b87dae911feb25a8d48a3d64d819a3e5a51e1d02f4547d4a666e375da0406de22516ba9b1</enc></to><to jid="6285173490332@s.whatsapp.net"><enc type="msg" v="2"><!-- 134 bytes --></enc></to></participants><device-identity><!-- 186 bytes --></device-identity></message>[0m
+02:12:47.735 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB05BCDD5F037D8906409" t="1721268767" type="read"/>[0m
+02:12:47.737 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB05BCDD5F037D8906409" t="1721268767"/>[0m
+02:12:47.750 [Client/Recv DEBUG] <ack class="message" from="6282119292227@s.whatsapp.net" id="3EB0064B0B99FCA585F263" t="1721268767"/>[0m
+02:12:47.750 [Client DEBUG] Decrypting message from 6282119292227@s.whatsapp.net[0m
+02:12:47.750 [Client/Send DEBUG] <receipt id="8B7F285C2F7D017466" to="6282119292227:17@s.whatsapp.net" type="inactive"/>[0m
+02:12:47.750 [Client/Send DEBUG] <ack class="message" id="C54C397DF8F2FA2AE53BF14C1232666E" to="6282119292227@s.whatsapp.net"/>[0m
+2024/07/18 02:12:47 main.go:214: Table created successfully
+2024/07/18 02:12:47 main.go:223: Event saved: {Tanggal:19-07-2024 Notifikasi:07:00 Keterangan:Ke Gereja GKim, besok, melakukan acara demo applikasi yang di lakukan oleh sodara martin.}
+02:12:47.762 [Client/Send DEBUG] <message id="3EB05F8427322DC02F35F9" to="6282119292227@s.whatsapp.net" type="text"><participants><to jid="6282119292227@s.whatsapp.net"><enc type="msg" v="2">330a2105d163b76d521efad816585de06dc599fc69d1b800fb714617b7fd75e6688e31151000180322207ba20c72c155b8737758b775148a0df65be16fe3e2991c9f1d0d90bb2bdbd8e77f8d6833484e2d22</enc></to><to jid="6282119292227:17@s.whatsapp.net"><enc type="msg" v="2">330a2105dff9f01f1263072ac108c8b554256b37f1fa9d379d0c4b2e84084bc3d69a7e1b100118ffffffff0f2230585fee791a9a37ed80e132f91e666d31e6ce98cdf5ef79105003799e57f68efbf0d8a9537d8891d2b9a992bf9b757f6f306aeade02df7c4f</enc></to><to jid="6285173490332@s.whatsapp.net"><enc type="msg" v="2"><!-- 134 bytes --></enc></to></participants></message>[0m
+02:12:47.766 [Client/Recv DEBUG] <receipt from="6282119292227@s.whatsapp.net" id="3EB05BCDD5F037D8906409" t="1721268767" type="read"/>[0m
+02:12:47.840 [Client/Recv DEBUG] <receipt from="6285173490332@s.whatsapp.net" id="3EB05BCDD5F037D8906409" recipient="6282119292227@s.whatsapp.net" t="1721268767" type="sender"/>[0m
+02:12:48.060 [Client/Recv DEBUG] <ack class="message" from="6282119292227@s.whatsapp.net" id="3EB05F8427322DC02F35F9" t="1721268767"/>[0m
+02:12:48.061 [Client/Send DEBUG] <receipt id="C54C397DF8F2FA2AE53BF14C1232666E" to="6282119292227@s.whatsapp.net" type="inactive"/>[0m
+02:12:48.061 [Client/Send DEBUG] <ack class="receipt" id="3EB05BCDD5F037D8906409" to="6282119292227:17@s.whatsapp.net" type="read"/>[0m
+02:12:48.061 [Client/Send DEBUG] <ack class="receipt" id="3EB05BCDD5F037D8906409" to="6282119292227@s.whatsapp.net" type="read"/>[0m
+02:12:48.061 [Client/Send DEBUG] <ack class="receipt" id="3EB05BCDD5F037D8906409" recipient="6282119292227@s.whatsapp.net" to="6285173490332@s.whatsapp.net" type="sender"/>[0m
+02:12:48.061 [Client/Send DEBUG] <ack class="receipt" id="3EB05BCDD5F037D8906409" to="6282119292227:17@s.whatsapp.net"/>[0m
+02:12:48.095 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB0064B0B99FCA585F263" t="1721268767"/>[0m
+02:12:48.095 [Client/Send DEBUG] <ack class="receipt" id="3EB0064B0B99FCA585F263" to="6282119292227:17@s.whatsapp.net"/>[0m
+02:12:48.095 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB0064B0B99FCA585F263" t="1721268767" type="read"/>[0m
+02:12:48.096 [Client/Send DEBUG] <ack class="receipt" id="3EB0064B0B99FCA585F263" to="6282119292227:17@s.whatsapp.net" type="read"/>[0m
+02:12:48.409 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB05F8427322DC02F35F9" t="1721268768"/>[0m
+02:12:48.409 [Client/Send DEBUG] <ack class="receipt" id="3EB05F8427322DC02F35F9" to="6282119292227:17@s.whatsapp.net"/>[0m
+02:12:48.410 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB05F8427322DC02F35F9" t="1721268768" type="read"/>[0m
+02:12:48.410 [Client/Send DEBUG] <ack class="receipt" id="3EB05F8427322DC02F35F9" to="6282119292227:17@s.whatsapp.net" type="read"/>[0m
+02:12:48.489 [Client/Recv DEBUG] <receipt from="6285173490332@s.whatsapp.net" id="3EB05F8427322DC02F35F9" recipient="6282119292227@s.whatsapp.net" t="1721268768" type="sender"/>[0m
+02:12:48.489 [Client/Send DEBUG] <ack class="receipt" id="3EB05F8427322DC02F35F9" recipient="6282119292227@s.whatsapp.net" to="6285173490332@s.whatsapp.net" type="sender"/>[0m
+02:12:48.513 [Client/Recv DEBUG] <receipt from="6282119292227@s.whatsapp.net" id="3EB05F8427322DC02F35F9" t="1721268768" type="read"/>[0m
+02:12:48.513 [Client/Send DEBUG] <ack class="receipt" id="3EB05F8427322DC02F35F9" to="6282119292227@s.whatsapp.net" type="read"/>[0m
+02:13:12.258 [Client/Send DEBUG] <iq id="159.8-11" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:13:12.554 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-11" t="1721268792" type="result"/>[0m
+2024/07/18 02:13:17 main.go:234: Running scheduled check
+2024/07/18 02:13:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:13
+02:13:41.772 [Client/Send DEBUG] <iq id="159.8-12" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:13:42.068 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-12" t="1721268821" type="result"/>[0m
+02:14:06.734 [Client/Send DEBUG] <iq id="159.8-13" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:14:07.030 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-13" t="1721268846" type="result"/>[0m
+2024/07/18 02:14:17 main.go:234: Running scheduled check
+2024/07/18 02:14:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:14
+02:14:30.116 [Client/Send DEBUG] <iq id="159.8-14" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:14:30.412 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-14" t="1721268870" type="result"/>[0m
+02:14:59.034 [Client/Send DEBUG] <iq id="159.8-15" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:14:59.330 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-15" t="1721268899" type="result"/>[0m
+2024/07/18 02:15:17 main.go:234: Running scheduled check
+2024/07/18 02:15:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:15
+02:15:27.986 [Client/Send DEBUG] <iq id="159.8-16" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:15:28.283 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-16" t="1721268928" type="result"/>[0m
+02:15:54.714 [Client/Send DEBUG] <iq id="159.8-17" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:15:55.010 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-17" t="1721268954" type="result"/>[0m
+2024/07/18 02:16:17 main.go:234: Running scheduled check
+2024/07/18 02:16:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:16
+02:16:18.344 [Client/Send DEBUG] <iq id="159.8-18" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:16:18.639 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-18" t="1721268978" type="result"/>[0m
+02:16:45.038 [Client/Send DEBUG] <iq id="159.8-19" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:16:45.334 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-19" t="1721269005" type="result"/>[0m
+02:17:09.294 [Client/Send DEBUG] <iq id="159.8-20" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:17:09.590 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-20" t="1721269029" type="result"/>[0m
+2024/07/18 02:17:17 main.go:234: Running scheduled check
+2024/07/18 02:17:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:17
+02:17:35.070 [Client/Send DEBUG] <iq id="159.8-21" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:17:35.366 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-21" t="1721269055" type="result"/>[0m
+02:18:02.746 [Client/Send DEBUG] <iq id="159.8-22" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:18:03.042 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-22" t="1721269082" type="result"/>[0m
+2024/07/18 02:18:17 main.go:234: Running scheduled check
+2024/07/18 02:18:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:18
+02:18:23.346 [Client/Send DEBUG] <iq id="159.8-23" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:18:23.642 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-23" t="1721269103" type="result"/>[0m
+02:18:49.252 [Client/Send DEBUG] <iq id="159.8-24" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:18:49.548 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-24" t="1721269129" type="result"/>[0m
+02:19:15.820 [Client/Send DEBUG] <iq id="159.8-25" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:19:16.116 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-25" t="1721269155" type="result"/>[0m
+2024/07/18 02:19:17 main.go:234: Running scheduled check
+2024/07/18 02:19:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:19
+02:19:37.974 [Client/Send DEBUG] <iq id="159.8-26" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:19:38.270 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-26" t="1721269178" type="result"/>[0m
+02:19:59.966 [Client/Send DEBUG] <iq id="159.8-27" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:20:00.262 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-27" t="1721269200" type="result"/>[0m
+2024/07/18 02:20:17 main.go:234: Running scheduled check
+2024/07/18 02:20:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:20
+02:20:18.002 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><edge_routing><routing_info>08050808</routing_info></edge_routing></ib>[0m
+02:20:22.475 [Client/Send DEBUG] <iq id="159.8-28" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:20:22.771 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-28" t="1721269222" type="result"/>[0m
+02:20:51.893 [Client/Send DEBUG] <iq id="159.8-29" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:20:52.189 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-29" t="1721269252" type="result"/>[0m
+02:21:14.551 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:21:14.832 [Client/Socket DEBUG] Frame websocket read pump starting 0xc0002a8140[0m
+02:21:15.072 [Client DEBUG] Starting handler queue loop[0m
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x8 pc=0x859dad]
+
+goroutine 42 [running]:
+main.processReminders()
+	/home/developer/fahril/whatsmeow-send-message/main.go:309 +0x4d
+created by main.main in goroutine 1
+	/home/developer/fahril/whatsmeow-send-message/main.go:118 +0x3b1
+exit status 2
+02:21:15.526 [Client/Recv DEBUG] <stream:error><conflict type="replaced"/></stream:error>[0m
+02:21:15.526 [Client/Recv DEBUG] <xmlstreamend/>[0m
+02:21:15.526[33m [Client WARN] Received stream end frame[0m
+02:21:15.526[36m [Client INFO] Got replaced stream error, sending StreamReplaced event[0m
+02:21:15.640 [Client/Send DEBUG] <iq id="159.8-30" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:21:15.652[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:21:15.653 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00025e500[0m
+02:21:15.653 [Client DEBUG] Closing handler queue loop[0m
+02:21:15.654 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+2024/07/18 02:21:17 main.go:234: Running scheduled check
+2024/07/18 02:21:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:21:17 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:21:17.058 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:21:17.302 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00044a3c0[0m
+2024/07/18 02:21:17 main.go:100: Successfully reconnected to WhatsApp
+02:21:17.531 [Client DEBUG] Starting handler queue loop[0m
+02:21:17.815 [Client/Recv DEBUG] <success abprops="10" companion_enc_static="6f0a4B+O35VZiapTd+8LJyFRNYTRzxW0K2gcYBHLu4k=" creation="1721267900" display_name="+62∙∙∙∙∙∙∙∙∙32" lid="252922470338713:7@lid" location="nao" props="27" t="1721269277"/>[0m
+02:21:17.815[36m [Client INFO] Successfully authenticated[0m
+02:21:17.815 [Client/Send DEBUG] <iq id="159.8-31" to="s.whatsapp.net" type="get" xmlns="encrypt"><count/></iq>[0m
+02:21:17.932 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><edge_routing><routing_info>08050808</routing_info></edge_routing></ib>[0m
+02:21:17.932 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><dirty timestamp="1721269277" type="account_sync"/></ib>[0m
+02:21:18.061 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-31" type="result"><count value="47"/></iq>[0m
+02:21:18.061 [Client DEBUG] Database has 47 prekeys, server says we have 47[0m
+02:21:18.061 [Client/Send DEBUG] <iq id="159.8-32" to="s.whatsapp.net" type="set" xmlns="passive"><active/></iq>[0m
+02:21:18.289 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-32" type="result"><active/></iq>[0m
+02:21:18.351 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><offline count="0"/></ib>[0m
+02:21:45.818 [Client/Send DEBUG] <iq id="159.8-33" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:21:46.047 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-33" t="1721269305" type="result"/>[0m
+02:22:06.562 [Client/Send DEBUG] <iq id="159.8-34" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:22:06.790 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-34" t="1721269326" type="result"/>[0m
+2024/07/18 02:22:17 main.go:234: Running scheduled check
+2024/07/18 02:22:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:22
+02:22:32.690 [Client/Send DEBUG] <iq id="159.8-35" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:22:32.919 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-35" t="1721269352" type="result"/>[0m
+02:22:53.364 [Client/Send DEBUG] <iq id="159.8-36" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:22:53.592 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-36" t="1721269373" type="result"/>[0m
+2024/07/18 02:23:17 main.go:234: Running scheduled check
+2024/07/18 02:23:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:23
+02:23:17.761 [Client/Send DEBUG] <iq id="159.8-37" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:23:17.990 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-37" t="1721269397" type="result"/>[0m
+02:23:43.934 [Client/Send DEBUG] <iq id="159.8-38" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:23:44.163 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-38" t="1721269424" type="result"/>[0m
+02:24:08.858 [Client/Send DEBUG] <iq id="159.8-39" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:24:09.086 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-39" t="1721269448" type="result"/>[0m
+2024/07/18 02:24:17 main.go:234: Running scheduled check
+2024/07/18 02:24:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:24
+02:24:36.874 [Client/Send DEBUG] <iq id="159.8-40" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:24:37.103 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-40" t="1721269476" type="result"/>[0m
+02:25:04.052 [Client/Send DEBUG] <iq id="159.8-41" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:25:04.281 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-41" t="1721269504" type="result"/>[0m
+2024/07/18 02:25:17 main.go:234: Running scheduled check
+2024/07/18 02:25:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:25
+02:25:30.148 [Client/Send DEBUG] <iq id="159.8-42" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:25:30.377 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-42" t="1721269530" type="result"/>[0m
+02:25:53.574 [Client/Send DEBUG] <iq id="159.8-43" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:25:53.802 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-43" t="1721269553" type="result"/>[0m
+2024/07/18 02:26:17 main.go:234: Running scheduled check
+2024/07/18 02:26:17 main.go:257: Checking reminders for date: 18-07-2024, time: 09:26
+02:26:19.998 [Client/Send DEBUG] <iq id="159.8-44" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:26:20.228 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-44" t="1721269580" type="result"/>[0m
+02:26:46.238 [Client/Send DEBUG] <iq id="159.8-45" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:26:46.467 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-45" t="1721269606" type="result"/>[0m
+02:26:57.108 [Client/Recv DEBUG] <notification from="s.whatsapp.net" id="232542416" t="1721269616" type="server_sync"><collection name="critical_block" version="4"/><collection name="critical_unblock_low" version="15"/><collection name="regular" version="9"/><collection name="regular_high" version="4"/><collection name="regular_low" version="9"/></notification>[0m
+02:26:57.108 [Client/Send DEBUG] <ack class="notification" id="232542416" to="s.whatsapp.net" type="server_sync"/>[0m
+02:26:57.108 [Client DEBUG] Got server sync notification that app state critical_block has updated to version 4[0m
+02:26:57.108 [Client/Send DEBUG] <iq id="159.8-46" to="s.whatsapp.net" type="set" xmlns="w:sync:app:state"><sync><collection name="critical_block" return_snapshot="false" version="3"/></sync></iq>[0m
+02:26:57.408 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="159.8-46" type="result"><sync><collection name="critical_block"><patches><patch><!-- 716 bytes --></patch></patches></collection></sync></iq>[0m
+02:26:57.410[31m [Client/AppState ERROR] Failed to update app state version in the database: attempt to write a readonly database[0m
+02:26:57.410[31m [Client/AppState ERROR] Failed to remove deleted mutation MACs from the database: attempt to write a readonly database[0m
+02:26:57.410[31m [Client/AppState ERROR] Failed to insert added mutation MACs to the database: attempt to write a readonly database[0m
+02:26:57.410 [Client DEBUG] Synced app state critical_block from version 3 to 4[0m
+02:26:57.410 [Client DEBUG] Got server sync notification that app state critical_unblock_low has updated to version 15[0m
+02:26:57.410 [Client/Send DEBUG] <iq id="159.8-47" to="s.whatsapp.net" type="set" xmlns="w:sync:app:state"><sync><collection name="critical_unblock_low" return_snapshot="false" version="14"/></sync></iq>[0m
+02:26:57.706 [Client/Recv DEBUG] <stream:error code="401"><conflict type="device_removed"/></stream:error>[0m
+02:26:57.707 [Client/Recv DEBUG] <xmlstreamend/>[0m
+02:26:57.707[33m [Client WARN] Received stream end frame[0m
+02:26:57.707[36m [Client INFO] Got device removed stream error, sending LoggedOut event and deleting session[0m
+02:26:57.707 [Client DEBUG] 159.8-47 (info query) was interrupted by websocket disconnection (<stream:error code="401"><conflict type="device_removed"/></stream:error>), not retrying as it looks like an auth error[0m
+02:26:57.707 [Client DEBUG] Failed to sync app state after notification: failed to fetch app state critical_unblock_low patches: websocket disconnected before info query returned response, not trying to sync other states[0m
+02:26:57.707[33m [Client WARN] Failed to delete store after device_removed error: attempt to write a readonly database[0m
+02:26:57.804[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:26:57.804 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00044a3c0[0m
+02:26:57.804 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:26:57.804 [Client DEBUG] Closing handler queue loop[0m
+2024/07/18 02:27:17 main.go:234: Running scheduled check
+2024/07/18 02:27:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:27:17 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:27:17.534 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:27:17.796 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00044a500[0m
+2024/07/18 02:27:18 main.go:100: Successfully reconnected to WhatsApp
+02:27:18.036 [Client DEBUG] Starting handler queue loop[0m
+02:27:22.059 [Client/Recv DEBUG] <failure location="rva" reason="401"/>[0m
+02:27:22.060[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:27:22.060[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:27:22.150[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:27:22.150 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00044a500[0m
+02:27:22.150 [Client DEBUG] Closing handler queue loop[0m
+02:27:22.150 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+2024/07/18 02:28:17 main.go:234: Running scheduled check
+2024/07/18 02:28:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:28:18 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:28:18.036 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:28:18.294 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00044b040[0m
+2024/07/18 02:28:18 main.go:100: Successfully reconnected to WhatsApp
+02:28:18.530 [Client DEBUG] Starting handler queue loop[0m
+02:28:22.267[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:28:22.267 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00044b040[0m
+02:28:22.267 [Client DEBUG] Emitting Disconnected event[0m
+02:28:22.267 [Client DEBUG] Automatically reconnecting after 0s[0m
+02:28:22.267 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:28:22.267 [Client DEBUG] Closing handler queue loop[0m
+02:28:22.267 [Client/Recv DEBUG] <failure location="rva" reason="401"/>[0m
+02:28:22.582 [Client/Socket DEBUG] Frame websocket read pump starting 0xc0004aa000[0m
+02:28:22.881 [Client DEBUG] Starting handler queue loop[0m
+02:28:22.881[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:28:22.882[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:28:24.321 [Client/Recv DEBUG] <failure location="cln" reason="401"/>[0m
+02:28:24.321[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:28:24.322[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:28:24.443[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:28:24.443 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc0004aa000[0m
+02:28:24.443 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:28:24.443 [Client DEBUG] Closing handler queue loop[0m
+2024/07/18 02:29:17 main.go:234: Running scheduled check
+2024/07/18 02:29:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:29:18 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:29:18.530 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:29:18.774 [Client/Socket DEBUG] Frame websocket read pump starting 0xc0004aa780[0m
+2024/07/18 02:29:19 main.go:100: Successfully reconnected to WhatsApp
+02:29:19.002 [Client DEBUG] Starting handler queue loop[0m
+02:29:21.378 [Client/Recv DEBUG] <failure location="nao" reason="401"/>[0m
+02:29:21.378[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:29:21.378[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:29:21.488[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:29:21.488 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc0004aa780[0m
+02:29:21.489 [Client DEBUG] Closing handler queue loop[0m
+02:29:21.489 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+2024/07/18 02:30:17 main.go:234: Running scheduled check
+2024/07/18 02:30:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:30:19 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:30:19.003 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:30:19.737 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00025e500[0m
+2024/07/18 02:30:19 main.go:100: Successfully reconnected to WhatsApp
+02:30:19.979 [Client DEBUG] Starting handler queue loop[0m
+02:30:20.503 [Client/Recv DEBUG] <failure location="rva" reason="401"/>[0m
+02:30:20.503[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:30:20.503[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:30:20.589[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:30:20.589 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00025e500[0m
+02:30:20.589 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:30:20.589 [Client DEBUG] Closing handler queue loop[0m
+2024/07/18 02:31:17 main.go:234: Running scheduled check
+2024/07/18 02:31:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:31:19 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:31:19.982 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:31:20.245 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00025e780[0m
+2024/07/18 02:31:20 main.go:100: Successfully reconnected to WhatsApp
+02:31:20.487 [Client DEBUG] Starting handler queue loop[0m
+02:31:24.484 [Client/Recv DEBUG] <failure location="rva" reason="401"/>[0m
+02:31:24.484[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:31:24.484[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:31:24.597[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:31:24.597 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00025e780[0m
+02:31:24.598 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:31:24.598 [Client DEBUG] Closing handler queue loop[0m
+02:31:43.279 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:31:43.543 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00024c500[0m
+02:31:43.773 [Client DEBUG] Starting handler queue loop[0m
+02:31:44.061 [Client/Recv DEBUG] <success abprops="10" companion_enc_static="h3F85IGqngT/MHOcbXivTt+5XvHylyFpX151lfldXRE=" creation="1721269747" display_name="+62∙∙∙∙∙∙∙∙∙32" lid="252922470338713:9@lid" location="nao" props="27" t="1721269903"/>[0m
+02:31:44.061[36m [Client INFO] Successfully authenticated[0m
+02:31:44.062 [Client/Send DEBUG] <iq id="172.186-1" to="s.whatsapp.net" type="get" xmlns="encrypt"><count/></iq>[0m
+02:31:44.174 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><edge_routing><routing_info>08050808</routing_info></edge_routing></ib>[0m
+02:31:44.174 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><dirty timestamp="1721269904" type="account_sync"/></ib>[0m
+02:31:44.302 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-1" type="result"><count value="48"/></iq>[0m
+02:31:44.302 [Client DEBUG] Database has 48 prekeys, server says we have 48[0m
+02:31:44.302 [Client/Send DEBUG] <iq id="172.186-2" to="s.whatsapp.net" type="set" xmlns="passive"><active/></iq>[0m
+02:31:44.528 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-2" type="result"><active/></iq>[0m
+02:31:44.567 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><offline count="0"/></ib>[0m
+02:32:06.275 [Client/Send DEBUG] <iq id="172.186-3" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:32:06.502 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-3" t="1721269926" type="result"/>[0m
+2024/07/18 02:32:17 main.go:234: Running scheduled check
+2024/07/18 02:32:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:32:20 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:32:20.489 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:32:20.743 [Client/Socket DEBUG] Frame websocket read pump starting 0xc0000b8000[0m
+2024/07/18 02:32:20 main.go:100: Successfully reconnected to WhatsApp
+02:32:20.975 [Client DEBUG] Starting handler queue loop[0m
+02:32:23.716 [Client/Recv DEBUG] <failure location="frc" reason="401"/>[0m
+02:32:23.716[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:32:23.716[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:32:23.821[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:32:23.822 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc0000b8000[0m
+02:32:23.822 [Client DEBUG] Closing handler queue loop[0m
+02:32:23.822 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:32:28.926 [Client/Send DEBUG] <iq id="172.186-4" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:32:29.156 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-4" t="1721269949" type="result"/>[0m
+2024/07/18 02:32:43 main.go:234: Running scheduled check
+2024/07/18 02:32:43 main.go:257: Checking reminders for date: 18-07-2024, time: 09:32
+02:32:50.133 [Client/Send DEBUG] <iq id="172.186-5" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:32:50.359 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-5" t="1721269970" type="result"/>[0m
+2024/07/18 02:33:17 main.go:234: Running scheduled check
+2024/07/18 02:33:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+02:33:20.298 [Client/Send DEBUG] <iq id="172.186-6" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:33:20.525 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-6" t="1721270000" type="result"/>[0m
+2024/07/18 02:33:20 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:33:20.978 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:33:21.233 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00044a3c0[0m
+2024/07/18 02:33:21 main.go:100: Successfully reconnected to WhatsApp
+02:33:21.466 [Client DEBUG] Starting handler queue loop[0m
+02:33:24.327 [Client/Recv DEBUG] <failure location="frc" reason="401"/>[0m
+02:33:24.328[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:33:24.328[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:33:24.437[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:33:24.437 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00044a3c0[0m
+02:33:24.438 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:33:24.438 [Client DEBUG] Closing handler queue loop[0m
+2024/07/18 02:33:43 main.go:234: Running scheduled check
+2024/07/18 02:33:43 main.go:257: Checking reminders for date: 18-07-2024, time: 09:33
+02:33:48.557 [Client/Send DEBUG] <iq id="172.186-7" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:33:48.783 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-7" t="1721270028" type="result"/>[0m
+02:34:16.560 [Client/Send DEBUG] <iq id="172.186-8" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:34:16.786 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-8" t="1721270056" type="result"/>[0m
+2024/07/18 02:34:17 main.go:234: Running scheduled check
+2024/07/18 02:34:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:34:21 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:34:21.470 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:34:21.696 [Client/Socket DEBUG] Frame websocket read pump starting 0xc0000b8000[0m
+2024/07/18 02:34:21 main.go:100: Successfully reconnected to WhatsApp
+02:34:21.894 [Client DEBUG] Starting handler queue loop[0m
+02:34:22.650 [Client/Recv DEBUG] <failure location="vll" reason="401"/>[0m
+02:34:22.650[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:34:22.651[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:34:22.778[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:34:22.778 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc0000b8000[0m
+02:34:22.779 [Client DEBUG] Closing handler queue loop[0m
+02:34:22.779 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:34:40.210 [Client/Send DEBUG] <iq id="172.186-9" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:34:40.437 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-9" t="1721270080" type="result"/>[0m
+2024/07/18 02:34:43 main.go:234: Running scheduled check
+2024/07/18 02:34:43 main.go:257: Checking reminders for date: 18-07-2024, time: 09:34
+02:35:03.818 [Client/Send DEBUG] <iq id="172.186-10" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:35:04.047 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-10" t="1721270103" type="result"/>[0m
+2024/07/18 02:35:17 main.go:234: Running scheduled check
+2024/07/18 02:35:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:35:21 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:35:21.899 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:35:22.161 [Client/Socket DEBUG] Frame websocket read pump starting 0xc0000b8f00[0m
+2024/07/18 02:35:22 main.go:100: Successfully reconnected to WhatsApp
+02:35:22.402 [Client DEBUG] Starting handler queue loop[0m
+02:35:24.048 [Client/Recv DEBUG] <failure location="rva" reason="401"/>[0m
+02:35:24.048[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:35:24.049[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:35:24.134[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:35:24.134 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc0000b8f00[0m
+02:35:24.134 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:35:24.134 [Client DEBUG] Closing handler queue loop[0m
+02:35:28.475 [Client/Send DEBUG] <iq id="172.186-11" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:35:28.702 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-11" t="1721270128" type="result"/>[0m
+2024/07/18 02:35:43 main.go:234: Running scheduled check
+2024/07/18 02:35:43 main.go:257: Checking reminders for date: 18-07-2024, time: 09:35
+02:35:49.346 [Client/Send DEBUG] <iq id="172.186-12" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:35:49.573 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="172.186-12" t="1721270149" type="result"/>[0m
+02:35:52.536 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00024c500[0m
+02:35:52.536 [Client DEBUG] Closing handler queue loop[0m
+2024/07/18 02:36:17 main.go:234: Running scheduled check
+2024/07/18 02:36:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:36:22 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:36:22.408 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:36:22.662 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00025e500[0m
+2024/07/18 02:36:22 main.go:100: Successfully reconnected to WhatsApp
+02:36:22.897 [Client DEBUG] Starting handler queue loop[0m
+02:36:25.182 [Client/Recv DEBUG] <failure location="frc" reason="401"/>[0m
+02:36:25.182[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:36:25.182[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:36:25.277[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:36:25.277 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00025e500[0m
+02:36:25.277 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:36:25.277 [Client DEBUG] Closing handler queue loop[0m
+2024/07/18 02:37:17 main.go:234: Running scheduled check
+2024/07/18 02:37:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:37:22 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:37:22.902 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:37:23.160 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00025e780[0m
+2024/07/18 02:37:23 main.go:100: Successfully reconnected to WhatsApp
+02:37:23.397 [Client DEBUG] Starting handler queue loop[0m
+02:37:26.070 [Client/Recv DEBUG] <failure location="rva" reason="401"/>[0m
+02:37:26.070[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:37:26.070[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:37:26.160[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:37:26.160 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00025e780[0m
+02:37:26.160 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:37:26.160 [Client DEBUG] Closing handler queue loop[0m
+2024/07/18 02:38:17 main.go:234: Running scheduled check
+2024/07/18 02:38:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:38:23 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:38:23.403 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:38:23.629 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00044a3c0[0m
+2024/07/18 02:38:23 main.go:100: Successfully reconnected to WhatsApp
+02:38:23.839 [Client DEBUG] Starting handler queue loop[0m
+02:38:28.467 [Client/Recv DEBUG] <failure location="atn" reason="401"/>[0m
+02:38:28.467[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:38:28.467[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:38:28.571[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:38:28.571 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00044a3c0[0m
+02:38:28.571 [Client DEBUG] Closing handler queue loop[0m
+02:38:28.571 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:38:28.992 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:38:29.333 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00024c500[0m
+02:38:29.632 [Client DEBUG] Starting handler queue loop[0m
+02:38:30.081 [Client/Recv DEBUG] <success abprops="10" companion_enc_static="h3F85IGqngT/MHOcbXivTt+5XvHylyFpX151lfldXRE=" creation="1721269747" display_name="+62∙∙∙∙∙∙∙∙∙32" lid="252922470338713:9@lid" location="cln" props="27" t="1721270309"/>[0m
+02:38:30.081[36m [Client INFO] Successfully authenticated[0m
+02:38:30.082 [Client/Send DEBUG] <iq id="171.195-1" to="s.whatsapp.net" type="get" xmlns="encrypt"><count/></iq>[0m
+02:38:30.308 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><edge_routing><routing_info>08050808</routing_info></edge_routing></ib>[0m
+02:38:30.308 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><dirty timestamp="1721270310" type="account_sync"/></ib>[0m
+02:38:30.496 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="171.195-1" type="result"><count value="48"/></iq>[0m
+02:38:30.496 [Client DEBUG] Database has 48 prekeys, server says we have 48[0m
+02:38:30.496 [Client/Send DEBUG] <iq id="171.195-2" to="s.whatsapp.net" type="set" xmlns="passive"><active/></iq>[0m
+02:38:30.792 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="171.195-2" type="result"><active/></iq>[0m
+02:38:30.950 [Client/Recv DEBUG] <ib from="s.whatsapp.net"><offline count="0"/></ib>[0m
+2024/07/18 02:38:34 main.go:232: Running scheduled check
+2024/07/18 02:38:34 main.go:254: Checking reminders for date: 18-07-2024, time: 09:38
+2024/07/18 02:38:39 main.go:232: Running scheduled check
+2024/07/18 02:38:39 main.go:254: Checking reminders for date: 18-07-2024, time: 09:38
+2024/07/18 02:38:44 main.go:232: Running scheduled check
+2024/07/18 02:38:44 main.go:254: Checking reminders for date: 18-07-2024, time: 09:38
+2024/07/18 02:38:49 main.go:232: Running scheduled check
+2024/07/18 02:38:49 main.go:254: Checking reminders for date: 18-07-2024, time: 09:38
+2024/07/18 02:38:54 main.go:232: Running scheduled check
+2024/07/18 02:38:54 main.go:254: Checking reminders for date: 18-07-2024, time: 09:38
+02:38:54.643 [Client/Send DEBUG] <iq id="171.195-3" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:38:54.940 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="171.195-3" t="1721270334" type="result"/>[0m
+2024/07/18 02:38:59 main.go:232: Running scheduled check
+2024/07/18 02:38:59 main.go:254: Checking reminders for date: 18-07-2024, time: 09:38
+2024/07/18 02:39:04 main.go:232: Running scheduled check
+2024/07/18 02:39:04 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+2024/07/18 02:39:09 main.go:232: Running scheduled check
+2024/07/18 02:39:09 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+2024/07/18 02:39:14 main.go:232: Running scheduled check
+2024/07/18 02:39:14 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+2024/07/18 02:39:17 main.go:234: Running scheduled check
+2024/07/18 02:39:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:39:19 main.go:232: Running scheduled check
+2024/07/18 02:39:19 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+02:39:21.581 [Client/Send DEBUG] <iq id="171.195-4" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:39:21.878 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="171.195-4" t="1721270361" type="result"/>[0m
+2024/07/18 02:39:23 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:39:23.845 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:39:24.115 [Client/Socket DEBUG] Frame websocket read pump starting 0xc00044ac80[0m
+2024/07/18 02:39:24 main.go:100: Successfully reconnected to WhatsApp
+02:39:24.356 [Client DEBUG] Starting handler queue loop[0m
+2024/07/18 02:39:24 main.go:232: Running scheduled check
+2024/07/18 02:39:24 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+02:39:29.606 [Client/Recv DEBUG] <failure location="rva" reason="401"/>[0m
+02:39:29.606[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:39:29.607[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+2024/07/18 02:39:29 main.go:232: Running scheduled check
+2024/07/18 02:39:29 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+02:39:29.689[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:39:29.689 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc00044ac80[0m
+02:39:29.689 [Client DEBUG] Closing handler queue loop[0m
+02:39:29.689 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+2024/07/18 02:39:34 main.go:232: Running scheduled check
+2024/07/18 02:39:34 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+2024/07/18 02:39:39 main.go:232: Running scheduled check
+2024/07/18 02:39:39 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+2024/07/18 02:39:44 main.go:232: Running scheduled check
+2024/07/18 02:39:44 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+02:39:48.322 [Client/Send DEBUG] <iq id="171.195-5" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:39:48.619 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="171.195-5" t="1721270388" type="result"/>[0m
+2024/07/18 02:39:49 main.go:232: Running scheduled check
+2024/07/18 02:39:49 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+02:39:50.546 [Client/Recv DEBUG] <message from="6282119292227@s.whatsapp.net" id="25594D4FA6BEBA7D3C52575AAF0E3EE2" notify="6282119292227" sender_lid="251453205643418@lid" t="1721270390" type="text"><enc type="msg" v="2"><!-- 179 bytes --></enc><reporting><reporting_tag>01a168fb0101139a7cf9426b617dbc20</reporting_tag></reporting></message>[0m
+02:39:50.546 [Client DEBUG] Decrypting message from 6282119292227@s.whatsapp.net[0m
+02:39:50.547 [Client/Send DEBUG] <ack class="message" id="25594D4FA6BEBA7D3C52575AAF0E3EE2" to="6282119292227@s.whatsapp.net"/>[0m
+2024/07/18 02:39:50 main.go:214: Table created successfully
+2024/07/18 02:39:50 main.go:223: Event saved: {Tanggal:18-07-2024 Notifikasi:09:40 Keterangan:Perbaiki django}
+02:39:50.555 [Client/Send DEBUG] <iq id="171.195-7" to="s.whatsapp.net" type="get" xmlns="usync"><usync context="message" index="0" last="true" mode="query" sid="171.195-6"><query><devices version="2"/></query><list><user jid="6282119292227@s.whatsapp.net"/><user jid="6285173490332@s.whatsapp.net"/></list></usync></iq>[0m
+02:39:51.115 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="171.195-7" type="result"><usync context="message" index="0" last="true" mode="query" sid="171.195-6"><result><devices/></result><list><user jid="6285173490332@s.whatsapp.net"><devices><device-list><device id="0"/><device id="9" key-index="1"/></device-list><key-index-list ts="1721269746">0a1408818cdd8f0110f2fbe1b40618012202000128001240b58149d7ac4ea0734414e1337137ede3cd30d56ce397420b8a5a17b13552f8e07f589bf9272de741d17a3beb49e3f9955ed748fadee0981eb448d02ebaf74105</key-index-list></devices></user><user jid="6282119292227@s.whatsapp.net"><devices><device-list><device id="0"/><device id="17" key-index="1"/></device-list><key-index-list ts="1719996496">0a1508f889d7a20510d0a094b406180222030001022800124091304b79f628f3bf21bebc024c5b2ff89796b9f2b87c354202d0fecab660645a64784287a9ec0b7954c090e4e732cf2410289b8ca1b085fb18be02dd31a37900</key-index-list></devices></user></list></usync></iq>[0m
+02:39:51.122 [Client/Send DEBUG] <message id="3EB00D4F8F6204908BC074" to="6282119292227@s.whatsapp.net" type="text"><participants><to jid="6285173490332@s.whatsapp.net"><enc type="msg" v="2">330a210527e1a0acd4e48922cae7bcbc03cab4ca915dc908b318e2905c502ebabeb9674f100118ffffffff0f22405b84026135f88fa2220131b626848f3867ab523e4ef3846be18579bd34f931b04420f26d4182ff5fe065bcc176ef76bc54d3f50bffc9a7e38f4a0e0b660b3bbaf06150fc96256bf4</enc></to><to jid="6282119292227@s.whatsapp.net"><enc type="msg" v="2">330a2105fe501f1db2e02d9da426d2fa9e1d68875e58562ef45407a425767b794b29b36b1000180022306a55b0b19b8d459466df0cadd295c5391bd5a9b67d8d3450590330e25c477e38f21d76d789fd19725d1d403e05eee4aeac9e499a900463aa</enc></to><to jid="6282119292227:17@s.whatsapp.net"><enc type="msg" v="2">330a21059c675ca657b162a1d4416d34988880a06a35ff16a37d6cda3cc2c59ff0794144100118ffffffff0f222081d646b277b18e8b24b90c8e77b2f5304eed2fce5dfeb31f071a1970c8fabb48ff883a61bf355236</enc></to></participants></message>[0m
+02:39:51.443 [Client/Recv DEBUG] <ack class="message" from="6282119292227@s.whatsapp.net" id="3EB00D4F8F6204908BC074" t="1721270391"/>[0m
+02:39:51.443 [Client/Send DEBUG] <receipt id="25594D4FA6BEBA7D3C52575AAF0E3EE2" to="6282119292227@s.whatsapp.net" type="inactive"/>[0m
+02:39:51.897 [Client/Recv DEBUG] <receipt from="6282119292227@s.whatsapp.net" id="3EB00D4F8F6204908BC074" t="1721270391" type="read"/>[0m
+02:39:51.897 [Client/Send DEBUG] <ack class="receipt" id="3EB00D4F8F6204908BC074" to="6282119292227@s.whatsapp.net" type="read"/>[0m
+02:39:52.933 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB00D4F8F6204908BC074" t="1721270392"/>[0m
+02:39:52.933 [Client/Send DEBUG] <ack class="receipt" id="3EB00D4F8F6204908BC074" to="6282119292227:17@s.whatsapp.net"/>[0m
+2024/07/18 02:39:54 main.go:232: Running scheduled check
+2024/07/18 02:39:54 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+02:39:58.839 [Client/Recv DEBUG] <message from="6282119292227@s.whatsapp.net" id="698B65FF0BB4897A30F9748A61FB05EB" notify="6282119292227" sender_lid="251453205643418@lid" t="1721270398" type="text"><enc type="msg" v="2"><!-- 243 bytes --></enc><reporting><reporting_tag>01a17aabf953e12ccf3892a920dafaf9</reporting_tag></reporting></message>[0m
+02:39:58.839 [Client DEBUG] Decrypting message from 6282119292227@s.whatsapp.net[0m
+02:39:58.840 [Client/Send DEBUG] <ack class="message" id="698B65FF0BB4897A30F9748A61FB05EB" to="6282119292227@s.whatsapp.net"/>[0m
+2024/07/18 02:39:58 main.go:214: Table created successfully
+2024/07/18 02:39:58 main.go:223: Event saved: {Tanggal:19-07-2024 Notifikasi:07:00 Keterangan:Ke Gereja GKim, besok, melakukan acara demo applikasi yang di lakukan oleh sodara martin.}
+02:39:58.849 [Client/Send DEBUG] <message id="3EB0E5974EB74932B278E9" to="6282119292227@s.whatsapp.net" type="text"><participants><to jid="6282119292227@s.whatsapp.net"><enc type="msg" v="2">330a21058aa7d19d24b29049c51963d54a0750c1ea8d628f786c6d6227b51cdcdbd7280f100018002230167b6542144e0af3b27c32d858e6c1772a213d13d112b9493c089b0a4f17897dd266b0d746abe8c61247b3c4c991fca1a729f5840368a420</enc></to><to jid="6282119292227:17@s.whatsapp.net"><enc type="msg" v="2">330a21059c675ca657b162a1d4416d34988880a06a35ff16a37d6cda3cc2c59ff0794144100218ffffffff0f222084b4e0f9f4e29f16b0eb42d354d4d5d985380e6b3ce70a6a88dcdd17f45eefb5a39c5b91dfd322f9</enc></to><to jid="6285173490332@s.whatsapp.net"><enc type="msg" v="2">330a210527e1a0acd4e48922cae7bcbc03cab4ca915dc908b318e2905c502ebabeb9674f100218ffffffff0f2240c04b1797c12cedb3f68e64b0006766a94550110158bc630c29e4ccc6fcbfb2a7567804fe4f157917c18ab8c8492d4652d034d8e6b5ba9daeaf44b227b51ac3fb430bd50c41430271</enc></to></participants></message>[0m
+02:39:59.148 [Client/Recv DEBUG] <ack class="message" from="6282119292227@s.whatsapp.net" id="3EB0E5974EB74932B278E9" t="1721270398"/>[0m
+02:39:59.148 [Client/Send DEBUG] <receipt id="698B65FF0BB4897A30F9748A61FB05EB" to="6282119292227@s.whatsapp.net" type="inactive"/>[0m
+02:39:59.486 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB0E5974EB74932B278E9" t="1721270399"/>[0m
+02:39:59.486 [Client/Send DEBUG] <ack class="receipt" id="3EB0E5974EB74932B278E9" to="6282119292227:17@s.whatsapp.net"/>[0m
+02:39:59.522 [Client/Recv DEBUG] <receipt from="6285173490332@s.whatsapp.net" id="3EB0E5974EB74932B278E9" recipient="6282119292227@s.whatsapp.net" t="1721270399" type="sender"/>[0m
+02:39:59.522 [Client/Send DEBUG] <ack class="receipt" id="3EB0E5974EB74932B278E9" recipient="6282119292227@s.whatsapp.net" to="6285173490332@s.whatsapp.net" type="sender"/>[0m
+02:39:59.570 [Client/Recv DEBUG] <receipt from="6282119292227@s.whatsapp.net" id="3EB0E5974EB74932B278E9" t="1721270399" type="read"/>[0m
+02:39:59.570 [Client/Send DEBUG] <ack class="receipt" id="3EB0E5974EB74932B278E9" to="6282119292227@s.whatsapp.net" type="read"/>[0m
+2024/07/18 02:39:59 main.go:232: Running scheduled check
+2024/07/18 02:39:59 main.go:254: Checking reminders for date: 18-07-2024, time: 09:39
+2024/07/18 02:40:04 main.go:232: Running scheduled check
+2024/07/18 02:40:04 main.go:254: Checking reminders for date: 18-07-2024, time: 09:40
+6282119292227@s.whatsapp.net
+02:40:09.642[31m [Database ERROR] Failed to save identity of 6282119292227:0: database is locked[0m
+02:40:14.649[31m [Database ERROR] Failed to store session with 6282119292227:0: database is locked[0m
+2024/07/18 02:40:17 main.go:234: Running scheduled check
+2024/07/18 02:40:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+02:40:17.538 [Client/Send DEBUG] <iq id="171.195-8" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:40:17.834 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="171.195-8" t="1721270417" type="result"/>[0m
+02:40:19.656[31m [Database ERROR] Failed to save identity of 6282119292227:17: database is locked[0m
+2024/07/18 02:40:24 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:40:24.362 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:40:24.614 [Client/Socket DEBUG] Frame websocket read pump starting 0xc0000b8000[0m
+02:40:24.667[31m [Database ERROR] Failed to store session with 6282119292227:17: database is locked[0m
+2024/07/18 02:40:24 main.go:100: Successfully reconnected to WhatsApp
+02:40:24.850 [Client DEBUG] Starting handler queue loop[0m
+02:40:26.157 [Client/Recv DEBUG] <failure location="frc" reason="401"/>[0m
+02:40:26.157[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:40:26.157[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:40:26.251[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:40:26.252 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc0000b8000[0m
+02:40:26.252 [Client DEBUG] Closing handler queue loop[0m
+02:40:26.252 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:40:29.675[31m [Database ERROR] Failed to save identity of 6285173490332:0: database is locked[0m
+02:40:34.682[31m [Database ERROR] Failed to store session with 6285173490332:0: database is locked[0m
+02:40:34.682 [Client/Send DEBUG] <message id="3EB03C0DD8063971FF287C" to="6282119292227@s.whatsapp.net" type="text"><participants><to jid="6282119292227@s.whatsapp.net"><enc type="msg" v="2">330a21058aa7d19d24b29049c51963d54a0750c1ea8d628f786c6d6227b51cdcdbd7280f100118002240da3904445b60bab06b50730b3f54c1846e1079f6a3ca794b7c0214d6bbf75b953a951403260a49d9f2f329f03efb1fc0b0211e3ceed3df04f5196218c456da1cd690c13f86ac2165</enc></to><to jid="6282119292227:17@s.whatsapp.net"><enc type="msg" v="2">330a21059c675ca657b162a1d4416d34988880a06a35ff16a37d6cda3cc2c59ff0794144100318ffffffff0f2240045ba7b524fbb9f0713e99862c2fa7165514ff27cc0d1854bbdf53fedf0564310709a837bb4f38bcc8679e78b62c35ee9c7d97484fe85ced1e005cbf20494a44bc490edd29e9fb90</enc></to><to jid="6285173490332@s.whatsapp.net"><enc type="msg" v="2"><!-- 150 bytes --></enc></to></participants></message>[0m
+02:40:34.982 [Client/Recv DEBUG] <ack class="message" from="6282119292227@s.whatsapp.net" id="3EB03C0DD8063971FF287C" t="1721270434"/>[0m
+2024/07/18 02:40:34 main.go:276: Reminder sent successfully to 6282119292227
+2024/07/18 02:40:34 main.go:232: Running scheduled check
+2024/07/18 02:40:34 main.go:254: Checking reminders for date: 18-07-2024, time: 09:40
+6282119292227@s.whatsapp.net
+02:40:35.449 [Client/Recv DEBUG] <receipt from="6282119292227@s.whatsapp.net" id="3EB03C0DD8063971FF287C" t="1721270435"/>[0m
+02:40:35.450 [Client/Send DEBUG] <ack class="receipt" id="3EB03C0DD8063971FF287C" to="6282119292227@s.whatsapp.net"/>[0m
+02:40:35.459 [Client/Recv DEBUG] <receipt from="6285173490332@s.whatsapp.net" id="3EB03C0DD8063971FF287C" recipient="6282119292227@s.whatsapp.net" t="1721270435" type="sender"/>[0m
+02:40:35.459 [Client/Send DEBUG] <ack class="receipt" id="3EB03C0DD8063971FF287C" recipient="6282119292227@s.whatsapp.net" to="6285173490332@s.whatsapp.net" type="sender"/>[0m
+02:40:37.455 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB03C0DD8063971FF287C" t="1721270437"/>[0m
+02:40:37.456 [Client/Send DEBUG] <ack class="receipt" id="3EB03C0DD8063971FF287C" to="6282119292227:17@s.whatsapp.net"/>[0m
+02:40:39.989[31m [Database ERROR] Failed to save identity of 6282119292227:0: database is locked[0m
+02:40:44.118 [Client/Send DEBUG] <iq id="171.195-9" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:40:44.414 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="171.195-9" t="1721270444" type="result"/>[0m
+02:40:44.996[31m [Database ERROR] Failed to store session with 6282119292227:0: database is locked[0m
+02:40:49.963[31m [Database ERROR] Failed to save identity of 6282119292227:17: database is locked[0m
+02:40:54.970[31m [Database ERROR] Failed to store session with 6282119292227:17: database is locked[0m
+02:40:59.977[31m [Database ERROR] Failed to save identity of 6285173490332:0: database is locked[0m
+02:41:04.985[31m [Database ERROR] Failed to store session with 6285173490332:0: database is locked[0m
+02:41:04.985 [Client/Send DEBUG] <message id="3EB06B12E91404C3B98ACE" to="6282119292227@s.whatsapp.net" type="text"><participants><to jid="6282119292227@s.whatsapp.net"><enc type="msg" v="2">330a21058aa7d19d24b29049c51963d54a0750c1ea8d628f786c6d6227b51cdcdbd7280f100118002240da3904445b60bab06b50730b3f54c1846e1079f6a3ca794b7c0214d6bbf75b953a951403260a49d9f2f329f03efb1fc0b0211e3ceed3df04f5196218c456da1cd690c13f86ac2165</enc></to><to jid="6282119292227:17@s.whatsapp.net"><enc type="msg" v="2">330a21059c675ca657b162a1d4416d34988880a06a35ff16a37d6cda3cc2c59ff0794144100318ffffffff0f2240045ba7b524fbb9f0713e99862c2fa7165514ff27cc0d1854bbdf53fedf05643112ba96aef2e7d89ec5059475bf5272fa05fc62c3debae0f8390ac2e48004007722ce419c2ae71348</enc></to><to jid="6285173490332@s.whatsapp.net"><enc type="msg" v="2"><!-- 166 bytes --></enc></to></participants></message>[0m
+02:41:05.285 [Client/Recv DEBUG] <ack class="message" from="6282119292227@s.whatsapp.net" id="3EB06B12E91404C3B98ACE" t="1721270465"/>[0m
+2024/07/18 02:41:05 main.go:276: Reminder sent successfully to 6282119292227
+2024/07/18 02:41:05 main.go:232: Running scheduled check
+2024/07/18 02:41:05 main.go:254: Checking reminders for date: 18-07-2024, time: 09:41
+02:41:06.487 [Client/Recv DEBUG] <receipt from="6282119292227:17@s.whatsapp.net" id="3EB06B12E91404C3B98ACE" t="1721270466"/>[0m
+02:41:06.487 [Client/Send DEBUG] <ack class="receipt" id="3EB06B12E91404C3B98ACE" to="6282119292227:17@s.whatsapp.net"/>[0m
+2024/07/18 02:41:09 main.go:232: Running scheduled check
+2024/07/18 02:41:09 main.go:254: Checking reminders for date: 18-07-2024, time: 09:41
+02:41:13.362 [Client/Send DEBUG] <iq id="171.195-10" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:41:13.659 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="171.195-10" t="1721270473" type="result"/>[0m
+2024/07/18 02:41:14 main.go:232: Running scheduled check
+2024/07/18 02:41:14 main.go:254: Checking reminders for date: 18-07-2024, time: 09:41
+2024/07/18 02:41:17 main.go:234: Running scheduled check
+2024/07/18 02:41:17 main.go:242: WhatsApp client is not connected. Skipping reminder check.
+2024/07/18 02:41:19 main.go:232: Running scheduled check
+2024/07/18 02:41:19 main.go:254: Checking reminders for date: 18-07-2024, time: 09:41
+2024/07/18 02:41:24 main.go:232: Running scheduled check
+2024/07/18 02:41:24 main.go:254: Checking reminders for date: 18-07-2024, time: 09:41
+2024/07/18 02:41:24 main.go:93: WhatsApp client disconnected. Attempting to reconnect...
+02:41:24.850 [Client/Socket DEBUG] Dialing wss://web.whatsapp.com/ws/chat[0m
+02:41:25.106 [Client/Socket DEBUG] Frame websocket read pump starting 0xc0000b8140[0m
+2024/07/18 02:41:25 main.go:100: Successfully reconnected to WhatsApp
+02:41:25.339 [Client DEBUG] Starting handler queue loop[0m
+2024/07/18 02:41:29 main.go:232: Running scheduled check
+2024/07/18 02:41:29 main.go:254: Checking reminders for date: 18-07-2024, time: 09:41
+02:41:30.480 [Client/Recv DEBUG] <failure location="frc" reason="401"/>[0m
+02:41:30.481[36m [Client INFO] Got 401: logged out from another device connect failure, sending LoggedOut event and deleting session[0m
+02:41:30.481[33m [Client WARN] Failed to delete store after 401 failure: attempt to write a readonly database[0m
+02:41:30.578[31m [Client/Socket ERROR] Error reading from websocket: websocket: close 1006 (abnormal closure): unexpected EOF[0m
+02:41:30.578 [Client/Socket DEBUG] Frame websocket read pump exiting 0xc0000b8140[0m
+02:41:30.578 [Client DEBUG] OnDisconnect() called, but it was expected, so not emitting event[0m
+02:41:30.578 [Client DEBUG] Closing handler queue loop[0m
+2024/07/18 02:41:34 main.go:232: Running scheduled check
+2024/07/18 02:41:34 main.go:254: Checking reminders for date: 18-07-2024, time: 09:41
+2024/07/18 02:41:39 main.go:232: Running scheduled check
+2024/07/18 02:41:39 main.go:254: Checking reminders for date: 18-07-2024, time: 09:41
+02:41:42.054 [Client/Send DEBUG] <iq id="171.195-11" to="s.whatsapp.net" type="get" xmlns="w:p"/>[0m
+02:41:42.351 [Client/Recv DEBUG] <iq from="s.whatsapp.net" id="171.195-11" t="1721270502" type="result"/>[0m
+2024/07/18 02:41:44 main.go:232: Running scheduled check
+2024/07/18 02:41:44 main.go:254: Checking reminders for date: 18-07-2024, time: 09:41
