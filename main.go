@@ -8,9 +8,12 @@ import (
 	"os"
 	"os/signal"
 	"strings"
+	"sync"
 	"syscall"
 	"time"
 
+	"github.com/google/generative-ai-go/genai"
+	"github.com/joho/godotenv"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/mdp/qrterminal"
 	"go.mau.fi/whatsmeow"
@@ -19,10 +22,14 @@ import (
 	"go.mau.fi/whatsmeow/types"
 	"go.mau.fi/whatsmeow/types/events"
 	waLog "go.mau.fi/whatsmeow/util/log"
+	"google.golang.org/api/option"
 	"google.golang.org/protobuf/proto"
 )
 
-var client *whatsmeow.Client
+var (
+	client    *whatsmeow.Client
+	connMutex sync.Mutex
+)
 
 type Event struct {
 	Tanggal    string
@@ -40,6 +47,10 @@ func TimeNowLocal() time.Time {
 func main() {
 	// Inisialisasi log
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
 
 	loc, _ = time.LoadLocation("Asia/Jakarta")
 	dbLog := waLog.Stdout("Database", "DEBUG", true)
@@ -54,6 +65,19 @@ func main() {
 	clientLog := waLog.Stdout("Client", "DEBUG", true)
 	client = whatsmeow.NewClient(deviceStore, clientLog)
 	client.AddEventHandler(eventHandler)
+	client.AddEventHandler(func(evt interface{}) {
+		switch v := evt.(type) {
+		case *events.Connected:
+			log.Println("Connected to WhatsApp")
+		case *events.Disconnected:
+			log.Println("Disconnected from WhatsApp:", v)
+			go manageConnection()
+		case *events.StreamReplaced:
+			log.Println("Stream replaced, reconnecting...")
+			go manageConnection()
+			// ... (handler event lainnya)
+		}
+	})
 
 	if client.Store.ID == nil {
 		// No ID stored, new login
@@ -87,19 +111,40 @@ func main() {
 	client.Disconnect()
 }
 
+func InitializationGenAI() (*genai.Client, error) {
+	ctx := context.Background()
+	gogenai, err := genai.NewClient(ctx, option.WithAPIKey(os.Getenv("API_KEY")))
+	if err != nil {
+		return nil, fmt.Errorf("error initializing GenAI: %v", err)
+	}
+
+	return gogenai, nil
+}
+
 func manageConnection() {
+	connMutex.Lock()
+	defer connMutex.Unlock()
+
+	// Reconnect every minute
+	backoff := time.Second
+	maxBackoff := 5 * time.Minute
 	for {
 		if !client.IsConnected() {
 			log.Println("WhatsApp client disconnected. Attempting to reconnect...")
 			err := client.Connect()
 			if err != nil {
-				log.Printf("Failed to reconnect: %v. Retrying in 1 minute...", err)
-				time.Sleep(1 * time.Minute)
+				log.Printf("Failed to reconnect: %v. Retrying in %v...", err, backoff)
+				time.Sleep(backoff)
+				backoff = backoff * 2
+				if backoff > maxBackoff {
+					backoff = maxBackoff
+				}
 				continue
 			}
 			log.Println("Successfully reconnected to WhatsApp")
+			backoff = time.Second
 		}
-		time.Sleep(1 * time.Minute)
+		return
 	}
 }
 
@@ -122,7 +167,7 @@ func handlerMassage(v *events.Message) {
 	message = strings.TrimSpace(message)
 
 	if message == "/set" {
-		sendMessage := "Silahkan masukan format seperti berikut:\nTanggal: DD-MM-YYYY\nNotifikasi: HH:MM\nKeterangan: isi"
+		sendMessage := "Silahkan masukan format seperti berikut:\nTanggal: DD-MM-YYYY\nNotifikasi: HH:MM\nKeterangan: Isi Keterangan Acara"
 		HandleSendMessage(jid, sendMessage)
 		return
 	}
@@ -130,7 +175,7 @@ func handlerMassage(v *events.Message) {
 	if strings.HasPrefix(message, "Tanggal: ") {
 		event, err := parseEventMessage(message)
 		if err != nil {
-			HandleSendMessage(jid, "Format tidak sesuai, silahkan cek kembali '/set'")
+			HandleSendMessage(jid, err.Error())
 			return
 		}
 
@@ -155,12 +200,45 @@ func handlerMassage(v *events.Message) {
 
 		sendMessage := "Acara berhasil disimpan"
 		HandleSendMessage(jid, sendMessage)
+	} else {
+		gogenai, err := InitializationGenAI()
+		if err != nil {
+			log.Printf("Error initializing GenAI: %v", err)
+			return
+		}
+
+		gogenairesponse, err := GeminiResponse(gogenai, message)
+		if err != nil {
+			log.Printf("Error sending message to GenAI: %v", err)
+			return
+		}
+		sendMessage := gogenairesponse
+		HandleSendMessage(jid, sendMessage)
 	}
 }
 
+func GeminiResponse(gogenai *genai.Client, message string) (string, error) {
+	ctx := context.Background()
+	model := gogenai.GenerativeModel("gemini-1.5-flash")
+
+	resp, err := model.GenerateContent(ctx, genai.Text(message))
+	if err != nil {
+		return "", fmt.Errorf("error generating response: %v", err)
+	}
+
+	if len(resp.Candidates) == 0 || len(resp.Candidates[0].Content.Parts) == 0 {
+		return "", fmt.Errorf("no response received")
+	}
+
+	return fmt.Sprintf("%v", resp.Candidates[0].Content.Parts[0]), nil
+}
+
 func parseEventMessage(message string) (Event, error) {
+	fmt.Println(message)
 	lines := strings.Split(message, "\n")
-	if len(lines) < 3 {
+	fmt.Println(lines, "-------------------------")
+	if len(lines) < 3 || len(lines) > 3 {
+		fmt.Println(lines)
 		return Event{}, fmt.Errorf("format pesan tidak sesuai, kurang data")
 	}
 
@@ -175,8 +253,10 @@ func parseEventMessage(message string) (Event, error) {
 		}
 	}
 
+	fmt.Println(event.Tanggal, event.Notifikasi, event.Keterangan)
+
 	if event.Tanggal == "" || event.Notifikasi == "" || event.Keterangan == "" {
-		return Event{}, fmt.Errorf("format pesan tidak sesuai, data tidak lengkap")
+		return Event{}, fmt.Errorf(event.Tanggal, event.Notifikasi, event.Keterangan)
 	}
 
 	return event, nil
@@ -228,9 +308,17 @@ func startScheduler() {
 	ticker := time.NewTicker(5 * time.Second)
 	defer ticker.Stop()
 
-	for range ticker.C {
-		log.Println("Running scheduled check")
-		HandlerCheckAndSendReminder()
+	for {
+		select {
+		case <-ticker.C:
+			if client.IsConnected() {
+				log.Println("Running scheduled check")
+				HandlerCheckAndSendReminder()
+			} else {
+				log.Println("WhatsApp client is not connected. Skipping reminder check.")
+				go manageConnection()
+			}
+		}
 	}
 }
 
@@ -279,6 +367,11 @@ func HandlerCheckAndSendReminder() {
 
 	if err := rows.Err(); err != nil {
 		log.Println("Error iterating rows:", err)
+	}
+
+	_, err = db.Exec("DELETE FROM events WHERE tanggal = ? AND notifikasi = ?", currentDate, currentTime)
+	if err != nil {
+		log.Println("Error deleting from database:", err)
 	}
 }
 
